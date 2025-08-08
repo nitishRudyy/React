@@ -1,14 +1,20 @@
 import { useState } from 'react'
 import './App.css'
+import UserContext from './context/UserContext'
+import UserContextProvider from './context/UserContextProvider'
+import Profile from './component/Profile'
+import Login from './component/Login'
+
 
 function App() {
  
 
   return (
-    <>
-    <h1 className='bg-amber-200'>Hello CodeSandbox</h1>
-    <h2>Start editing to see some magic happen!</h2>
-    </>
+    <UserContextProvider>
+      <h1>LOGIN USER</h1>
+       <Login/>
+      <Profile/>
+    </UserContextProvider>
   )
 }
 
